@@ -27,8 +27,14 @@ namespace NetBarcodeDemo
             string otherText = "some text will show here draw datastring under the barcode image some text will show here draw datastring under the barcode image";
             //BarcodeForImg nb = new BarcodeForImg(data, otherText, NetBarcode.Type.Code128A, true, ww, hh, new Font("Consolas", 12));
             //picBarCodeImg.Image = nb.GetImage(); 
-            FbaLable itlab = new FbaLable(data, "some text here", NetBarcode.Type.Code128A);
-            picBarCodeImg.Image = itlab.GetItemLable();
+            try
+            {
+                FbaLable itlab = new FbaLable(data, "some text will show here draw datastring under the barcode image some text will show here draw datastring under the barcode image", NetBarcode.Type.Code128A);
+                picBarCodeImg.Image = itlab.GetItemLable();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
