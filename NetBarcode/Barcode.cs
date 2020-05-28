@@ -8,6 +8,9 @@ using System.IO;
 
 namespace NetBarcode
 {
+    /// <summary>
+    /// Barcode类型
+    /// </summary>
     public enum Type
     {
         Code11,
@@ -20,7 +23,9 @@ namespace NetBarcode
         EAN13,
         EAN8,
     }
-
+    /// <summary>
+    /// Barcode文字位置
+    /// </summary>
     public enum LabelPosition
     {
         TopLeft,
@@ -30,14 +35,18 @@ namespace NetBarcode
         BottomCenter,
         BottomRight
     };
-
+    /// <summary>
+    /// Barcode文字对齐方式
+    /// </summary>
     public enum AlignmentPosition
     {
         Center,
         Left,
         Right
     };
-
+    /// <summary>
+    /// Barcode类
+    /// </summary>
     public class Barcode
     {
         private readonly string _data;
